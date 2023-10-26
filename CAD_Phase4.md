@@ -126,67 +126,35 @@ Without this step, the Power VSI you create will not be able to ping between eac
 
 
 # 1.Identify Disaster Recovery Requirements:
-
-# Determine your disaster recovery requirements, including Recovery Time Objective (RTO) and Recovery Point Objective (RPO). You should have a clear plan for what services and data need to be replicated to ensure business continuity.
-
-#
-
+Determine your disaster recovery requirements, including Recovery Time Objective (RTO) and Recovery Point Objective (RPO). You should have a clear plan for what services and data need to be replicated to ensure business continuity.
 
 # 2.Select Primary and Secondary Locations:
-
-# Choose one PowerVS location as your primary data center where your AIX or IBM i workloads will run. Select one or more secondary PowerVS locations that will serve as disaster recovery sites.
-
-#
-
+Choose one PowerVS location as your primary data center where your AIX or IBM i workloads will run. Select one or more secondary PowerVS locations that will serve as disaster recovery sites.
 
 # 3.Set Up Replication:
-
-# Implement data replication mechanisms to keep your data synchronized between the primary and secondary locations. For AIX, you can use technologies like PowerHA. For IBM i, you can use built-in options like Remote Journaling, or third-party solutions.
-
-#
-
+Implement data replication mechanisms to keep your data synchronized between the primary and secondary locations. For AIX, you can use technologies like PowerHA. For IBM i, you can use built-in options like Remote Journaling, or third-party solutions.
 
 # 4.Provision VSIs in Primary Location:
-
-# a. In the primary PowerVS location, provision your AIX or IBM i VSIs as per your production requirements.
-
-# b. Ensure that these VSIs are configured to use the necessary data replication mechanisms to maintain data consistency.
-
-#
-
+a. In the primary PowerVS location, provision your AIX or IBM i VSIs as per your production requirements.
+b. Ensure that these VSIs are configured to use the necessary data replication mechanisms to maintain data consistency.
 
 # 5.Provision VSIs in Secondary Locations:
 
-# a. In each of the secondary PowerVS locations, provision identical AIX or IBM i VSIs with the same configuration as in the primary location. This ensures that you have standby systems ready for failover.
-
-# b. Make sure that these secondary VSIs are set to remain in a standby or offline state until needed for disaster recovery.
-
-#
-
+a. In each of the secondary PowerVS locations, provision identical AIX or IBM i VSIs with the same configuration as in the primary location. This ensures that you have standby systems ready for failover.
+b. Make sure that these secondary VSIs are set to remain in a standby or offline state until needed for disaster recovery.
 
 # 6.Implement Monitoring and Automation:
-
-# Set up monitoring tools and automation scripts to detect failures in the primary site. If a failure is detected, initiate the failover process.
+Set up monitoring tools and automation scripts to detect failures in the primary site. If a failure is detected, initiate the failover process.
 
 # 7.Test the Failover Process:
-
-# Regularly test your disaster recovery plan to ensure that the failover process works as expected. This testing helps identify and address any issues before a real disaster occurs.
-
-#
-
+Regularly test your disaster recovery plan to ensure that the failover process works as expected. This testing helps identify and address any issues before a real disaster occurs.
 
 # 8.Document the Procedures:
-
-# Ensure that you have detailed documentation of your disaster recovery procedures. This documentation should include step-by-step instructions for initiating failover and recovery processes.
-
-#
-
+Ensure that you have detailed documentation of your disaster recovery procedures. This documentation should include step-by-step instructions for initiating failover and recovery processes.
 
 # 9.Regularly Update and Maintain:
-
-# Regularly update your disaster recovery plan and ensure that your configurations in both the primary and secondary locations remain synchronized and up-to-date.
-
-# Remember that setting up a robust disaster recovery solution involves careful planning and testing. You may also want to consider third-party disaster recovery solutions that are specifically designed for AIX and IBM i environments to simplify the process.
+Regularly update your disaster recovery plan and ensure that your configurations in both the primary and secondary locations remain synchronized and up-to-date.
+Remember that setting up a robust disaster recovery solution involves careful planning and testing. You may also want to consider third-party disaster recovery solutions that are specifically designed for AIX and IBM i environments to simplify the process.
 
 The procedure is similar for both AIX and IBM i VSI provisioning. Here is a procedure to create an AIX 7.2 VSI. The cost shown are monthly costs, but you are being charged hourly.
 
