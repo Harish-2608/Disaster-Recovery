@@ -366,17 +366,16 @@ TOR01 GRE Configuration:
 
 LON06 GRE Configuration:
 
-# configure
+# configure
 
 - _set interfaces tunnel tun1 address 172.20.4.2/30_
 
 - _set interfaces tunnel tun1 remote-ip 10.114.118.34_
 - _set interfaces tunnel tun1 local-ip 10.72.74.203_
 
-| _set interfaces tunnel tun1 encapsulation gre__interfaces tunnel tun1 mtu 1300__commit_ |  _set_ |
+|set interfaces tunnel tun1 encapsulation gre__interfaces tunnel tun1 mtu 1300__commit_ |  _set_ |
 | --- | --- |
-
-# exit
+exit
 
 ![](RackMultipart20231026-1-kvubvi_html_f986b6455d12d243.jpg)
 
