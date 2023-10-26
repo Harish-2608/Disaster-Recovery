@@ -51,7 +51,7 @@ Here are some additional benefits of using automated recovery scripts during dis
 - **This could involve looking for specific errors in the log files,**
 - **or checking the status of specific services.**
 
-`  `**pass**
+**pass**
 
 **def recover\_from\_errors():**
 
@@ -60,7 +60,7 @@ Here are some additional benefits of using automated recovery scripts during dis
 
 **backups.**
 
-`  `**pass**
+**pass**
 
 **def notify\_user():**
 
@@ -68,37 +68,37 @@ Here are some additional benefits of using automated recovery scripts during dis
 - **This could involve sending an email or SMS message,**
 - **or logging an error message to a file.**
 
-`  `**pass**
+**pass**
 
 **if \_\_name\_\_ == '\_\_main\_\_':**
 
 - **Get the system state.**
 
-`  `**system\_state = get\_system\_state()**
+**system\_state = get\_system\_state()**
 
 - **Check for errors.**
 
-`  `**errors = check\_for\_errors()**
+**errors = check\_for\_errors()**
 
 - **If errors are found, attempt to recover from them.**
 
-`  `**if errors:**
+**if errors:**
 
-`    `**try:**
+**try:**
 
-`      `**recover\_from\_errors()**
+**recover\_from\_errors()**
 
-`    `**except Exception as e:**
+**except Exception as e:**
 
 - **Recovery failed. Notify the user.**
 
-`      `**notify\_user(e)**
+**notify\_user(e)**
 
-`  `**else:**
+**else:**
 
 - **No errors found. Continue.**
 
-`    `**pass**
+**pass**
 
 **Here are some tips for developing effective automated recovery scripts:** 
 
@@ -146,29 +146,29 @@ Here are some tips for implementing effective proactive monitoring:
 
 **def get\_cpu\_usage():**
 
-`  `**"""Returns the CPU usage as a percentage."""**
+**"""Returns the CPU usage as a percentage."""**
 
-`  `**response = requests.get("http://localhost:9090/metrics")   metrics = response.json()**
+**response = requests.get("http://localhost:9090/metrics")   metrics = response.json()**
 
-`  `**cpu\_usage = metrics["process\_cpu\_seconds\_total"] / time.process\_time() \* 100**
+**cpu\_usage = metrics["process\_cpu\_seconds\_total"] / time.process\_time() \* 100**
 
-`  `**return cpu\_usage**
+**return cpu\_usage**
 
 **def send\_alert(cpu\_usage):**
 
-`  `**"""Sends an alert if the CPU usage exceeds a threshold."""**
+**"""Sends an alert if the CPU usage exceeds a threshold."""**
 
-`  `**if cpu\_usage > 90:**
+**if cpu\_usage > 90:**
 
-`    `**print ("Alert! CPU usage is too high: {} %".format(cpu\_usage))**
+**print ("Alert! CPU usage is too high: {} %".format(cpu\_usage))**
 
 **if \_\_name\_\_ == "\_main\_\_":**
 
-`  `**while True:**
+**while True:**
 
-`    `**cpu\_usage = get\_cpu\_usage()     send\_alert(cpu\_usage)**
+**cpu\_usage = get\_cpu\_usage()     send\_alert(cpu\_usage)**
 
-`    `**time. Sleep (1)** 
+**time. Sleep (1)** 
 
 Here is an example of how the script could be used in a production environment: 
 
