@@ -4,7 +4,7 @@
 
 **PROJECT OBJECTIVE :**
 
-> The project objective of disaster recovery with IBM Cloud virtual
+The project objective of disaster recovery with IBM Cloud virtual
 > servers is to ***ensure the continuity of critical business operations
 > in the event of a disaster or unexpected outage.***
 >
